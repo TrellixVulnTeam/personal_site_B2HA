@@ -10,7 +10,27 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif; }
+
+.footer {
+  position: absolute;
+  top: 100%;
+  background-color: black;
+  width: 100%;
+  padding: 3rem 0; }
+  .footer__content {
+    display: flex;
+    justify-content: center; }
+  .footer__logo {
+    display: inline-block;
+    width: auto;
+    text-align: center; }
+    .footer__logo--img {
+      width: 15%; }
+  .footer__copyright {
+    text-align: center;
+    color: #fff; }
 
 .header {
   height: 80vh;
@@ -22,8 +42,7 @@ body {
   justify-content: center;
   align-items: center; }
   .header__text {
-    color: #fff;
-    font-family: "Raleway", sans-serif; }
+    color: #fff; }
   .header__heading, .header__subheading {
     display: block;
     font-weight: 700;
