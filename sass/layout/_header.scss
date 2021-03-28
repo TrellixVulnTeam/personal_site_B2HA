@@ -1,0 +1,32 @@
+.header {
+	height: 80vh;
+	background-image: url(/img/header_img.jpg);
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__text {
+		color: $color-white;
+		font-family: "Raleway", sans-serif;
+	}
+
+	&__heading,
+	&__subheading {
+		display: block;
+		font-weight: 700;
+		text-align: center;
+		letter-spacing: 0.5rem;
+	}
+
+	&__heading {
+		font-size: 4rem;
+		margin-bottom: 1rem;
+	}
+
+	&__subheading {
+		font-size: 2.5rem;
+	}
+}
