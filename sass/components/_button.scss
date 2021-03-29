@@ -1,0 +1,17 @@
+.button {
+	&:link,
+	&:visited {
+		text-decoration: none;
+		background-color: $color-black;
+		color: $color-white;
+		padding: 1rem 3rem;
+		font-weight: 700;
+		border-radius: 30px;
+		transition: all 0.3s;
+	}
+
+	&:hover {
+		transform: translateY(-0.7rem);
+		box-shadow: 0 1rem 3rem rgba($color-black, 0.4);
+	}
+}

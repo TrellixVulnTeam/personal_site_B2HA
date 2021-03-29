@@ -1,9 +1,9 @@
 .footer {
 	position: absolute;
-	top: 100%;
 	background-color: black;
 	width: 100%;
 	padding: 3rem 0;
+	bottom: auto;
 
 	&__content {
 		display: flex;
