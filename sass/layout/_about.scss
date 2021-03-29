@@ -1,18 +1,15 @@
 .about {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	padding: 8rem 0;
+	@include flexcenter;
 
 	&__img {
 		width: 20rem;
-		margin-bottom: 3rem;
 	}
 
-	&__text {
-		width: 50rem;
+	&__content {
+		margin-left: 6rem;
 		text-align: center;
-		margin-bottom: 3rem;
+		width: 40%;
 	}
 
 	&__heading {
@@ -20,7 +17,8 @@
 		margin-bottom: 1rem;
 	}
 
-	&__content {
+	&__text {
 		font-size: $default-font-size;
+		margin-bottom: 3rem;
 	}
 }
