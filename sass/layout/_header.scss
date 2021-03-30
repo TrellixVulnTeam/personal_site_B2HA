@@ -19,11 +19,11 @@
 	}
 
 	&__heading {
-		font-size: 4rem;
+		font-size: $heading-font-size;
 		margin-bottom: 1rem;
 	}
 
 	&__subheading {
-		font-size: 2.5rem;
+		font-size: $subheading-font-size;
 	}
 }

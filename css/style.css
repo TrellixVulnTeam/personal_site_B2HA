@@ -91,3 +91,40 @@ body {
     margin-bottom: 1rem; }
   .header__subheading {
     font-size: 2.5rem; }
+
+.skills {
+  background-color: #3d3d3d;
+  color: #fff;
+  padding: 8rem;
+  text-align: center; }
+  .skills__heading {
+    font-size: 2.5rem;
+    margin: 1rem; }
+  .skills__subheading {
+    margin: 1rem;
+    font-size: 1.6rem; }
+  .skills__box-large {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 3rem; }
+  .skills__box-small {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem; }
+  .skills__icon > * {
+    display: inline-block;
+    width: 6rem; }
+  .skills__icon {
+    filter: grayscale(100%);
+    transition: all 0.2s; }
+  .skills__icon:hover {
+    transform: translateY(-0.2rem) scale(1.1);
+    filter: none; }
+  .skills hr {
+    border: none;
+    border-top: 0.1rem solid #fff;
+    border-radius: 3rem;
+    width: 60%;
+    margin: 0 auto; }

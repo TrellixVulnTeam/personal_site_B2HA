@@ -1,0 +1,49 @@
+.skills {
+	background-color: $color-secondary-dark;
+	color: $color-white;
+	padding: 8rem;
+	text-align: center;
+
+	&__heading {
+		font-size: $subheading-font-size;
+		margin: 1rem;
+	}
+
+	&__subheading {
+		margin: 1rem;
+		font-size: $default-font-size;
+	}
+
+	&__box-large {
+		margin-bottom: 2rem;
+		@include largebox;
+	}
+
+	&__box-small {
+		margin-bottom: 2rem;
+		@include smallbox;
+	}
+
+	&__icon > * {
+		display: inline-block;
+		width: 6rem;
+	}
+
+	&__icon {
+		filter: grayscale(100%);
+		transition: all 0.2s;
+	}
+
+	&__icon:hover {
+		transform: translateY(-0.2rem) scale(1.1);
+		filter: none;
+	}
+
+	hr {
+		border: none;
+		border-top: 0.1rem solid $color-white;
+		border-radius: 3rem;
+		width: 60%;
+		margin: 0 auto;
+	}
+}
