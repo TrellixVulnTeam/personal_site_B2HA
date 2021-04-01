@@ -1,0 +1,41 @@
+.navigation {
+	position: fixed;
+	width: 100%;
+	z-index: 200;
+
+	&__bar {
+		display: flex;
+		background-color: $color-black;
+		padding: 1rem;
+		justify-content: space-between;
+		box-shadow: 0 2rem 4rem rgba($color-black, 0.4);
+	}
+
+	&__logo {
+		width: 12rem;
+		@include flexcenter;
+	}
+
+	&__list {
+		list-style: none;
+		display: flex;
+	}
+
+	&__item {
+		@include flexcenter;
+
+		margin-right: 3rem;
+	}
+
+	&__link {
+		font-size: $default-font-size;
+		color: $color-white;
+		text-decoration: none;
+		display: inline-block;
+		transition: all 0.2s;
+
+		&:hover {
+			transform: translateY(-0.3rem) scale(1.1);
+		}
+	}
+}

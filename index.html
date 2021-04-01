@@ -14,24 +14,35 @@
 
 	<body>
 		<!-- Navigation Section -->
-		<!-- <div class="navigation">
+		<div class="navigation">
 			<nav class="navigation__bar">
-				<img
-					src="img/logo_black.png"
-					alt="APark Logo"
-					class="navigation__logo"
-				/>
+				<a href="/index.html" class="navigation__link">
+					<img
+						src="img/logo_white.png"
+						alt="APark Logo"
+						class="navigation__logo"
+					/>
+				</a>
 
 				<ul class="navigation__list">
-					<li class="navigation__item">About Me</li>
-					<li class="navigation__item">Services</li>
-					<li class="navigation__item">Contact Me</li>
+					<li class="navigation__item">
+						<a href="#about" class="navigation__link">About Me</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#skills" class="navigation__link">Skills</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#work" class="navigation__link">Work</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#contact" class="navigation__link">Contact</a>
+					</li>
 				</ul>
 			</nav>
-		</div> -->
+		</div>
 
 		<!-- Header Section	 -->
-		<section class="header">
+		<section class="header" id="header">
 			<div class="header__text">
 				<span class="header__heading"
 					>Hello there, I am Alfredo Jeonghyun Park</span
@@ -40,7 +51,7 @@
 			</div>
 		</section>
 
-		<section class="about">
+		<section class="about" id="about">
 			<div class="about__img-container">
 				<img
 					src="img/profile_picture.png"
@@ -52,10 +63,8 @@
 			<div class="about__content">
 				<h2 class="about__heading">About Me</h2>
 				<p class="about__text">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ipsam
-					vel doloribus, sit sequi omnis adipisci aliquam, consectetur
-					asperiores blanditiis beatae error magnam possimus, tenetur
-					dignissimos? Numquam animi sapiente odit?
+					I am a web developer and a student at Instituto Tecnológico y de
+					Estudios Superiores de Monterrey studying Computer Technologies .
 				</p>
 				<a href="#" class="button"
 					>Download CV <i class="fas fa-download"></i
@@ -63,7 +72,7 @@
 			</div>
 		</section>
 
-		<section class="skills">
+		<section class="skills" id="skills">
 			<h2 class="skills__heading">Skills</h2>
 			<hr />
 			<div class="skills__container">
@@ -191,6 +200,70 @@
 							class="skills__icon--mongodb"
 						/>
 					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="work" id="work">
+			<div class="work__container">
+				<h2 class="work__heading">Work</h2>
+
+				<div class="work__box">
+					<div class="work__row">
+						<h3 class="work__job">
+							El avión de los sueños - Backend Developer
+						</h3>
+						<h3 class="work__date">March 2021 - Present</h3>
+						<p class="work__description">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+							possimus? Molestiae nostrum blanditiis commodi incidunt. Pariatur
+							quibusdam id, aliquid officia, optio, sequi culpa corporis
+							perferendis sint ducimus quas odio esse!
+						</p>
+					</div>
+
+					<div class="work__row">
+						<h3 class="work__job">The Coder - Web Developer</h3>
+						<h3 class="work__date">January 2021 - Present</h3>
+						<p class="work__description">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+							possimus? Molestiae nostrum blanditiis commodi incidunt. Pariatur
+							quibusdam id, aliquid officia, optio, sequi culpa corporis
+							perferendis sint ducimus quas odio esse!
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- <section class="projects" id="projects">
+			<div class="projects__container">
+				<h2 class="projects__heading">Projects</h2>
+				<hr />
+
+				<div class="projects__wrapper">
+					<div class="projects__box"></div>
+					<div class="projects__box"></div>
+					<div class="projects__box"></div>
+					<div class="projects__box"></div>
+				</div>
+			</div>
+		</section> -->
+
+		<section class="contact" id="contact">
+			<h2 class="contact__heading">Contact Me</h2>
+			<div class="contact__container">
+				<div class="contact__icon">
+					<a href="mailto:parkalfredojeonghyun@gmail.com" class="contact__link">
+						<i class="far fa-envelope"></i>
+						parkalfredojeonghyun@gmail.com
+					</a>
+				</div>
+				<div class="contact__icon">
+					<a href="https://github.com/alfredoPark-48" class="contact__link">
+						<i class="fab fa-github"></i>
+						alfredoPark-48
+					</a>
 				</div>
 			</div>
 		</section>

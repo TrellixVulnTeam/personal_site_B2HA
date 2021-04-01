@@ -92,10 +92,42 @@ body {
   .header__subheading {
     font-size: 2.5rem; }
 
+.navigation {
+  position: fixed;
+  width: 100%;
+  z-index: 200; }
+  .navigation__bar {
+    display: flex;
+    background-color: #000;
+    padding: 1rem;
+    justify-content: space-between;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4); }
+  .navigation__logo {
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .navigation__list {
+    list-style: none;
+    display: flex; }
+  .navigation__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem; }
+  .navigation__link {
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s; }
+    .navigation__link:hover {
+      transform: translateY(-0.3rem) scale(1.1); }
+
 .skills {
   background-color: #3d3d3d;
   color: #fff;
-  padding: 8rem;
+  padding: 6rem;
   text-align: center; }
   .skills__heading {
     font-size: 2.5rem;
@@ -117,6 +149,9 @@ body {
     display: inline-block;
     width: 6rem; }
   .skills__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     filter: grayscale(100%);
     transition: all 0.2s; }
   .skills__icon:hover {
@@ -128,3 +163,32 @@ body {
     border-radius: 3rem;
     width: 60%;
     margin: 0 auto; }
+
+.work {
+  background-color: #fff;
+  padding: 6rem; }
+  .work__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .work__row {
+    background-color: #bbbbbb;
+    width: 80%;
+    border-radius: 3px;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+    transition: all 0.3s; }
+    .work__row:not(:last-child) {
+      margin-bottom: 3rem; }
+    .work__row:hover {
+      transform: scale(1.1) translateY(-0.2rem); }
+  .work__heading {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    padding: 0 auto;
+    text-align: center; }
+  .work__job {
+    font-size: 1.6rem; }
+  .work__date {
+    margin-bottom: 1rem; }

@@ -1,7 +1,7 @@
 .skills {
 	background-color: $color-secondary-dark;
 	color: $color-white;
-	padding: 8rem;
+	padding: 6rem;
 	text-align: center;
 
 	&__heading {
@@ -30,6 +30,7 @@
 	}
 
 	&__icon {
+		@include flexcenter;
 		filter: grayscale(100%);
 		transition: all 0.2s;
 	}
