@@ -51,6 +51,25 @@ body {
     font-size: 1.6rem;
     margin-bottom: 3rem; }
 
+.contact {
+  background-color: #848484;
+  padding: 6rem; }
+  .contact__heading {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem; }
+  .contact__icon {
+    font-size: 1.6rem; }
+    .contact__icon:not(:last-child) {
+      margin-bottom: 1rem; }
+  .contact__link:link, .contact__link:visited {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s;
+    display: inline-block; }
+  .contact__link:hover {
+    transform: translateY(-0.3rem); }
+
 .footer {
   position: absolute;
   background-color: black;

@@ -1,0 +1,32 @@
+.contact {
+	background-color: $color-secondary-medium;
+	padding: 6rem;
+
+	&__heading {
+		color: $color-white;
+		font-size: $subheading-font-size;
+		margin-bottom: 1rem;
+	}
+
+	&__icon {
+		font-size: $default-font-size;
+
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			text-decoration: none;
+			color: $color-white;
+			transition: all 0.3s;
+			display: inline-block;
+		}
+
+		&:hover {
+			transform: translateY(-0.3rem);
+		}
+	}
+}
