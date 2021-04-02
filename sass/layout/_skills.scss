@@ -45,6 +45,10 @@
 		@include flexcenter;
 		filter: grayscale(100%);
 		transition: all 0.2s;
+
+		@include phonemax {
+			filter: none;
+		}
 	}
 
 	&__icon:hover {

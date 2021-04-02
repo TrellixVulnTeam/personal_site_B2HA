@@ -290,6 +290,9 @@ body {
     align-items: center;
     filter: grayscale(100%);
     transition: all 0.2s; }
+    @media (max-width: 37.5rem) {
+      .skills__icon {
+        filter: none; } }
   .skills__icon:hover {
     transform: translateY(-0.2rem) scale(1.1);
     filter: none; }
