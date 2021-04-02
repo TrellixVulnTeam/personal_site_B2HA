@@ -7,16 +7,28 @@
 	&__heading {
 		font-size: $subheading-font-size;
 		margin: 1rem;
+
+		@include phonemax {
+			font-size: $heading-font-size;
+		}
 	}
 
 	&__subheading {
 		margin: 1rem;
 		font-size: $default-font-size;
+
+		@include phonemax {
+			font-size: $subheading-font-size;
+		}
 	}
 
 	&__box-large {
 		margin-bottom: 2rem;
 		@include largebox;
+
+		@include phonemax {
+			@include smallbox;
+		}
 	}
 
 	&__box-small {

@@ -2,10 +2,15 @@
 	background-color: $color-secondary-medium;
 	padding: 6rem;
 
+	text-align: center;
 	&__heading {
 		color: $color-white;
 		font-size: $subheading-font-size;
 		margin-bottom: 1rem;
+
+		@include phonemax {
+			font-size: $heading-font-size;
+		}
 	}
 
 	&__icon {

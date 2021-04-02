@@ -3,21 +3,136 @@
 	width: 100%;
 	z-index: 200;
 
+	&__background {
+		background-color: $color-black;
+		position: fixed;
+		transition: all 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+		width: 100%;
+		border-radius: 50%;
+		z-index: 300;
+		width: 3rem;
+		height: 3rem;
+		top: 3rem;
+		right: 4rem;
+
+		@include phonemin {
+			display: none;
+		}
+	}
+
+	&__checkbox {
+		display: none;
+	}
+
+	&__button {
+		background-color: $color-white;
+		height: 6rem;
+		width: 6rem;
+		position: fixed;
+		border-radius: 50%;
+		z-index: 500;
+		top: 2rem;
+		right: 3rem;
+		cursor: pointer;
+		box-shadow: 0 0.8rem 2rem rgba($color-black, 0.4);
+
+		@include phonemin {
+			visibility: none;
+			opacity: 0;
+			display: none;
+		}
+	}
+
+	&__checkbox:checked ~ &__background {
+		transform: scale(80);
+	}
+
+	&__icon {
+		position: relative;
+		margin-top: 3rem;
+		margin-left: 1.7rem;
+
+		&,
+		&::before,
+		&::after {
+			width: 2.6rem;
+			height: 0.3rem;
+			background-color: $color-black;
+			display: inline-block;
+		}
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			transition: all 0.3s;
+		}
+
+		&::before {
+			top: -0.8rem;
+		}
+
+		&::after {
+			top: 0.8rem;
+		}
+	}
+
+	&__checkbox:checked + &__button &__icon {
+		background-color: transparent;
+	}
+	&__checkbox:checked + &__button &__icon::before {
+		transform: rotate(135deg);
+		top: 0;
+	}
+	&__checkbox:checked + &__button &__icon::after {
+		transform: rotate(-135deg);
+		top: 0;
+	}
+
 	&__bar {
 		display: flex;
 		background-color: $color-black;
-		padding: 1rem;
+		padding: 0.8rem;
 		justify-content: space-between;
 		box-shadow: 0 2rem 4rem rgba($color-black, 0.4);
+
+		@include phonemax {
+			background-color: transparent;
+			box-shadow: none;
+		}
 	}
 
 	&__logo {
 		width: 12rem;
 		@include flexcenter;
+
+		@include phonemax {
+			opacity: 0;
+			visibility: hidden;
+			display: none;
+		}
 	}
 
 	&__list {
 		list-style: none;
+		display: flex;
+
+		@include phonemax {
+			flex-direction: column;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			visibility: hidden;
+			transform: translate(-50%, -50%);
+			transition: all 1s;
+			opacity: 0;
+			z-index: 400;
+		}
+	}
+
+	&__checkbox:checked ~ &__list {
+		visibility: visible;
+		opacity: 1;
 		display: flex;
 	}
 
@@ -25,10 +140,15 @@
 		@include flexcenter;
 
 		margin-right: 3rem;
+
+		@include phonemax {
+			margin-right: 0;
+			margin-bottom: 3rem;
+		}
 	}
 
 	&__link {
-		font-size: $default-font-size;
+		font-size: $subheading-font-size;
 		color: $color-white;
 		text-decoration: none;
 		display: inline-block;
@@ -36,6 +156,10 @@
 
 		&:hover {
 			transform: translateY(-0.3rem) scale(1.1);
+		}
+
+		@include phonemax {
+			font-size: $heading-font-size;
 		}
 	}
 }

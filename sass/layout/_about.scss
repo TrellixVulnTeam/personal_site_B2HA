@@ -10,15 +10,29 @@
 		margin-left: 6rem;
 		text-align: center;
 		width: 40%;
+
+		@include phonemax {
+			margin-left: 0;
+			margin-top: 2rem;
+			width: 70%;
+		}
 	}
 
 	&__heading {
 		font-size: $subheading-font-size;
 		margin-bottom: 1rem;
+
+		@include phonemax {
+			font-size: $heading-font-size;
+		}
 	}
 
 	&__text {
 		font-size: $default-font-size;
 		margin-bottom: 3rem;
+	}
+
+	@include phonemax {
+		flex-direction: column;
 	}
 }

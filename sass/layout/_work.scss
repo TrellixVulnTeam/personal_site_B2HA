@@ -2,6 +2,9 @@
 	background-color: $color-white;
 	padding: 6rem;
 
+	@include phonemax {
+		padding: 6rem 0;
+	}
 	&__box {
 		@include flexcenter;
 		flex-direction: column;
@@ -29,13 +32,22 @@
 		font-size: $subheading-font-size;
 		padding: 0 auto;
 		text-align: center;
+
+		@include phonemax {
+			font-size: $heading-font-size;
+		}
 	}
 
 	&__job {
-		font-size: $default-font-size;
+		font-size: $subheading-font-size;
 	}
 
 	&__date {
 		margin-bottom: 1rem;
+		font-size: $default-font-size;
+	}
+
+	&__description {
+		font-size: $default-font-size;
 	}
 }
