@@ -1,5 +1,5 @@
 .navigation {
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	z-index: 200;
 
@@ -91,10 +91,8 @@
 
 	&__bar {
 		display: flex;
-		background-color: $color-black;
 		padding: 0.8rem;
 		justify-content: space-between;
-		box-shadow: 0 2rem 4rem rgba($color-black, 0.4);
 
 		@include phonemax {
 			background-color: transparent;
@@ -105,12 +103,6 @@
 	&__logo {
 		width: 12rem;
 		@include flexcenter;
-
-		@include phonemax {
-			opacity: 0;
-			visibility: hidden;
-			display: none;
-		}
 	}
 
 	&__list {
@@ -162,4 +154,10 @@
 			font-size: $heading-font-size;
 		}
 	}
+}
+
+.sticky {
+	background-color: $color-black;
+	position: fixed;
+	box-shadow: 0 2rem 4rem rgba($color-black, 0.4);
 }

@@ -1,13 +1,14 @@
 .header {
+	@include flexcenter;
 	height: 65vh;
 	background-image: url(../img/header_img.jpg);
 	background-position: top;
 	background-size: cover;
 	background-repeat: no-repeat;
-	@include flexcenter;
 
 	&__text {
 		color: $color-white;
+		width: 80%;
 	}
 
 	&__heading,

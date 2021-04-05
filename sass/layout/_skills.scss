@@ -1,12 +1,12 @@
 .skills {
 	background-color: $color-secondary-dark;
 	color: $color-white;
-	padding: 6rem;
+	@include paddingdefault;
 	text-align: center;
 
 	&__heading {
-		font-size: $subheading-font-size;
-		margin: 1rem;
+		font-size: $heading-font-size;
+		@include margindefault;
 
 		@include phonemax {
 			font-size: $heading-font-size;
@@ -14,12 +14,8 @@
 	}
 
 	&__subheading {
-		margin: 1rem;
-		font-size: $default-font-size;
-
-		@include phonemax {
-			font-size: $subheading-font-size;
-		}
+		@include margindefault;
+		font-size: $subheading-font-size;
 	}
 
 	&__box-large {
@@ -54,13 +50,5 @@
 	&__icon:hover {
 		transform: translateY(-0.2rem) scale(1.1);
 		filter: none;
-	}
-
-	hr {
-		border: none;
-		border-top: 0.1rem solid $color-white;
-		border-radius: 3rem;
-		width: 60%;
-		margin: 0 auto;
 	}
 }

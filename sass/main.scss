@@ -5,11 +5,15 @@
 @import "base/typography";
 
 @import "components/button";
+@import "components/rules";
 
 @import "layout/about";
 @import "layout/contact";
 @import "layout/footer";
 @import "layout/header";
 @import "layout/navigation";
+@import "layout/projects";
 @import "layout/skills";
 @import "layout/work";
+
+@import "pages/project1";

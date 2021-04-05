@@ -1,6 +1,6 @@
 .work {
+	@include paddingdefault;
 	background-color: $color-white;
-	padding: 6rem;
 
 	@include phonemax {
 		padding: 6rem 0;

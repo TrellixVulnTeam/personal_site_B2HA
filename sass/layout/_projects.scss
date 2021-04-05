@@ -1,0 +1,74 @@
+.projects {
+	@include paddingdefault;
+	background-color: $color-secondary-dark;
+	text-align: center;
+
+	&__heading {
+		@include margindefault;
+		color: $color-white;
+		font-size: $heading-font-size;
+	}
+
+	&__link {
+		display: block;
+		text-decoration: none;
+	}
+
+	&__wrapper {
+		@include margindefault;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 3rem;
+
+		@include screen(phone) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__box {
+		background-color: $color-white;
+		padding: 2rem;
+		border-radius: 3px;
+		box-shadow: 0 2rem 3rem rgba($color-black, 0.5);
+		position: relative;
+		cursor: pointer;
+		transition: all 0.3s;
+
+		&:hover {
+			transform: translateY(-0.5rem);
+		}
+	}
+
+	&__box:hover &__img {
+		filter: blur(2px);
+		-webkit-filter: blur(2px);
+	}
+	&__box:hover &__icon {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&__name {
+		margin-top: 1rem;
+		color: $color-black;
+		font-size: $default-font-size;
+	}
+
+	&__img {
+		max-width: 100%;
+		max-height: 100%;
+		transition: all 0.3s;
+	}
+
+	&__icon {
+		font-size: $heading-font-size;
+		color: $color-white;
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		visibility: hidden;
+		opacity: 0;
+		transform: translate(-50%, -50%);
+		transition: all 0.3s;
+	}
+}
