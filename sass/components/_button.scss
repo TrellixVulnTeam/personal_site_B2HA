@@ -8,12 +8,8 @@
 		padding: 1rem 3rem;
 		font-weight: 700;
 		font-size: $default-font-size;
-		border-radius: 30px;
+		border-radius: 5rem;
 		transition: all 0.3s;
-
-		@include screen(tab-port) {
-			font-size: $subheading-font-size;
-		}
 	}
 
 	&:hover {

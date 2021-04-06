@@ -18,10 +18,17 @@
 	row-gap: 3rem;
 }
 
-@mixin phonemax {
-	@media (max-width: 37.5rem) {
-		@content;
-	}
+@mixin singlebox {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	row-gap: 3rem;
+}
+
+@mixin noselect {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
 @mixin paddingdefault {

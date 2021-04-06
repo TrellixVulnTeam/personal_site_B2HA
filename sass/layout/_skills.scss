@@ -8,7 +8,7 @@
 		font-size: $heading-font-size;
 		@include margindefault;
 
-		@include phonemax {
+		@include screen(phone) {
 			font-size: $heading-font-size;
 		}
 	}
@@ -22,7 +22,7 @@
 		margin-bottom: 2rem;
 		@include largebox;
 
-		@include phonemax {
+		@include screen(tab-port) {
 			@include smallbox;
 		}
 	}
@@ -42,7 +42,7 @@
 		filter: grayscale(100%);
 		transition: all 0.2s;
 
-		@include phonemax {
+		@include screen(tab-land) {
 			filter: none;
 		}
 	}

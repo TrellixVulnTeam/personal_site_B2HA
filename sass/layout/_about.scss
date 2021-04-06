@@ -10,7 +10,7 @@
 	&__content {
 		text-align: center;
 		margin-left: 6rem;
-		width: 70%;
+		width: 85%;
 
 		@include screen(tab-land) {
 			margin-left: 0;
@@ -18,8 +18,15 @@
 		}
 	}
 
+	&__main {
+		margin: 0 auto;
+		width: 60%;
+	}
+
 	&__heading {
+		display: inline-block;
 		font-size: $heading-font-size;
+		@include margindefault;
 		margin-bottom: 1rem;
 	}
 
@@ -38,9 +45,68 @@
 		&:link,
 		&:visited {
 			text-decoration: none;
-			color: rgb(29, 49, 158);
-			font-weight: 700;
+			color: rgb(31, 48, 148);
 		}
+	}
+
+	&__button {
+		cursor: pointer;
+		font-size: $default-font-size;
+		font-weight: 700;
+		display: block;
+		margin: 4rem;
+		@include noselect;
+
+		&--icon {
+			font-size: $default-font-size;
+			transition: all 0.3s;
+		}
+	}
+
+	&__work {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 3rem;
+		@include margindefault;
+		@include screen(tab-land) {
+			@include singlebox;
+		}
+	}
+
+	&__item {
+		background-color: $color-secondary-light;
+		border-radius: 5px;
+		box-shadow: 0 2rem 2rem rgba($color-black, 0.4);
+		transition: all 0.6s;
+		@include flexcenter;
+		@include noselect;
+		flex-direction: column;
+
+		&--heading {
+			font-size: $subheading-font-size;
+		}
+		&--description {
+			font-size: $default-font-size;
+			@include margindefault;
+			width: 80%;
+		}
+
+		&:hover {
+			transform: translateY(-0.6rem);
+			box-shadow: 0 3rem 3rem rgba($color-black, 0.4);
+		}
+	}
+
+	&__icon {
+		font-size: $heading-font-size;
+		@include margindefault;
+		margin-bottom: 0;
+	}
+
+	&__text {
+		font-size: $default-font-size;
+		margin-bottom: 3rem;
+		line-height: 150%;
 	}
 
 	&__checkbox:checked ~ &__extra {
@@ -48,29 +114,7 @@
 		visibility: visible;
 		opacity: 1;
 	}
-
-	&__button {
-		cursor: pointer;
-		font-size: $default-font-size;
-		display: block;
-		user-select: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-		margin-bottom: 4rem;
-	}
-
-	&__icon {
-		transition: all 0.3s;
-	}
-
-	&__checkbox:checked ~ &__button &__icon {
-		transform: rotateX(180deg);
-	}
-
-	&__text {
-		font-size: $default-font-size;
-		margin-bottom: 3rem;
-		line-height: 150%;
+	&__checkbox:checked ~ &__button &__button--icon {
+		transform: rotate(180deg);
 	}
 }

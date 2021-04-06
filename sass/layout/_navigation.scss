@@ -38,7 +38,7 @@
 		cursor: pointer;
 		box-shadow: 0 0.8rem 2rem rgba($color-black, 0.4);
 
-		@include screen(tab-port) {
+		@include screen(tab-land) {
 			visibility: visible;
 		}
 	}
@@ -98,13 +98,17 @@
 	&__logo {
 		width: 12rem;
 		@include flexcenter;
+
+		@include screen(tab-land) {
+			display: none;
+		}
 	}
 
 	&__list {
 		list-style: none;
 		display: flex;
 
-		@include screen(tab-port) {
+		@include screen(tab-land) {
 			flex-direction: column;
 			position: fixed;
 			top: 50%;
@@ -128,7 +132,7 @@
 
 		margin-right: 3rem;
 
-		@include screen(tab-port) {
+		@include screen(tab-land) {
 			margin-right: 0;
 			margin-bottom: 5rem;
 		}
@@ -167,7 +171,7 @@
 	position: fixed;
 	box-shadow: 0 2rem 4rem rgba($color-black, 0.4);
 
-	@include screen(tab-port) {
+	@include screen(tab-land) {
 		background-color: transparent;
 		box-shadow: none;
 

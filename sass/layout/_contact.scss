@@ -8,7 +8,7 @@
 		font-size: $subheading-font-size;
 		margin-bottom: 1rem;
 
-		@include phonemax {
+		@include screen(phone) {
 			font-size: $heading-font-size;
 		}
 	}
