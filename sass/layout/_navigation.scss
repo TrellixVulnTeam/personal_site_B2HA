@@ -14,9 +14,10 @@
 		height: 3rem;
 		top: 3rem;
 		right: 4rem;
+		visibility: hidden;
 
-		@include phonemin {
-			display: none;
+		@include screen(tab-port) {
+			visibility: visible;
 		}
 	}
 
@@ -32,14 +33,13 @@
 		border-radius: 50%;
 		z-index: 500;
 		top: 2rem;
+		visibility: hidden;
 		right: 3rem;
 		cursor: pointer;
 		box-shadow: 0 0.8rem 2rem rgba($color-black, 0.4);
 
-		@include phonemin {
-			visibility: none;
-			opacity: 0;
-			display: none;
+		@include screen(tab-port) {
+			visibility: visible;
 		}
 	}
 
@@ -93,11 +93,6 @@
 		display: flex;
 		padding: 0.8rem;
 		justify-content: space-between;
-
-		@include phonemax {
-			background-color: transparent;
-			box-shadow: none;
-		}
 	}
 
 	&__logo {
@@ -109,7 +104,7 @@
 		list-style: none;
 		display: flex;
 
-		@include phonemax {
+		@include screen(tab-port) {
 			flex-direction: column;
 			position: fixed;
 			top: 50%;
@@ -133,9 +128,9 @@
 
 		margin-right: 3rem;
 
-		@include phonemax {
+		@include screen(tab-port) {
 			margin-right: 0;
-			margin-bottom: 3rem;
+			margin-bottom: 5rem;
 		}
 	}
 
@@ -149,8 +144,19 @@
 		&:hover {
 			transform: translateY(-0.3rem) scale(1.1);
 		}
+		&::after {
+			content: "";
+			display: block;
+			height: 2px;
+			width: 0;
+			background-color: $color-white;
+			transition: all 0.3s;
+		}
+		&:hover:after {
+			width: 100%;
+		}
 
-		@include phonemax {
+		@include screen(tab-port) {
 			font-size: $heading-font-size;
 		}
 	}
@@ -160,4 +166,14 @@
 	background-color: $color-black;
 	position: fixed;
 	box-shadow: 0 2rem 4rem rgba($color-black, 0.4);
+
+	@include screen(tab-port) {
+		background-color: transparent;
+		box-shadow: none;
+
+		.navigation__logo {
+			visibility: hidden;
+			display: none;
+		}
+	}
 }

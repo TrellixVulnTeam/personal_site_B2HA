@@ -1,39 +1,76 @@
 .about {
 	padding: 8rem 0;
 	@include flexcenter;
+	flex-direction: column;
 
 	&__img {
 		width: 20rem;
 	}
 
 	&__content {
-		margin-left: 6rem;
 		text-align: center;
-		width: 40%;
+		margin-left: 6rem;
+		width: 70%;
 
-		@include screen(phone) {
+		@include screen(tab-land) {
 			margin-left: 0;
 			margin-top: 2rem;
-			width: 70%;
 		}
 	}
 
 	&__heading {
 		font-size: $heading-font-size;
 		margin-bottom: 1rem;
+	}
 
-		@include phonemax {
-			font-size: $heading-font-size;
+	&__checkbox {
+		display: none;
+	}
+
+	&__extra {
+		position: absolute;
+		visibility: hidden;
+		opacity: 0;
+		margin-bottom: 4rem;
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			text-decoration: none;
+			color: rgb(29, 49, 158);
+			font-weight: 700;
 		}
+	}
+
+	&__checkbox:checked ~ &__extra {
+		position: static;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&__button {
+		cursor: pointer;
+		font-size: $default-font-size;
+		display: block;
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		margin-bottom: 4rem;
+	}
+
+	&__icon {
+		transition: all 0.3s;
+	}
+
+	&__checkbox:checked ~ &__button &__icon {
+		transform: rotateX(180deg);
 	}
 
 	&__text {
 		font-size: $default-font-size;
 		margin-bottom: 3rem;
 		line-height: 150%;
-	}
-
-	@include phonemax {
-		flex-direction: column;
 	}
 }
