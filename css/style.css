@@ -221,7 +221,7 @@ body {
     top: 3rem;
     right: 4rem;
     visibility: hidden; }
-    @media (max-width: 56.25em) {
+    @media (max-width: 75em) {
       .navigation__background {
         visibility: visible; } }
   .navigation__checkbox {

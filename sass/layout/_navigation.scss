@@ -16,7 +16,7 @@
 		right: 4rem;
 		visibility: hidden;
 
-		@include screen(tab-port) {
+		@include screen(tab-land) {
 			visibility: visible;
 		}
 	}
